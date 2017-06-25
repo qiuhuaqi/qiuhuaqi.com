@@ -32,6 +32,6 @@ For now, this blog is managed via a GitHub repo and served by [*GitHub Pages*](h
 
 ### Contact me
 I encourage you to share your thoughts with me via email!
-[email@domain.com](mailto:huaqi.qiu@outlook.com)
+[huaqi.qiu@outlook.com](mailto:huaqi.qiu@outlook.com)
 
 I'm also working on adding *Comment* function in posts.
