@@ -16,7 +16,7 @@ In addition to the original tutorial, this note adds details on:
 
 ## List of content:
 1. [Set up GCE VM instance](#1-set-up-gce-vm-instance)
-2. [Connect to the VM instance](#2-connect-to-the-vm-instance)  
+2. [Connect to VM instance](#2-connect-to-vm-instance)  
     1. [Install gcloud command line tool](#1-install-gcloud-command-line-tool)
     2. [Proxy settings](#2-proxy-settings)
     3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
@@ -38,8 +38,8 @@ Once your instance is ready to go, run your instance by selecting the instance y
 **Remember to stop your VM instance when you are done! Running instances cost credits or dollar bills!**
 ![out-of-credit-dog](http://cs231n.github.io/assets/sadpuppy_nocredits.png)
 
-## 2. Connect to the VM instance  
-   ### 1. Install gcloud command line tool
+## 2. Connect to VM instance  
+   ### 1. Install `$gcloud`command line tool
    To connect to your running VM instance on GCE, you can use the `$gcloud` command line in Google Cloud SDK. Download and install the SDK from [here](https://cloud.google.com/sdk/docs) following **step 1 to step 4** on the page.  
    
    Then run the following in your shell:  
@@ -65,17 +65,37 @@ $gcloud init --console-only --skip-diagnostics
      
    For Mac OS X, add the following lines in `~/.bash_profile` and `~/.bashrc`:  
    ```
-   export http_proxy=http://127.0.0.1:1087;
-   export https_proxy=https://127.0.0.1:1087;
+   export http_proxy=http://[proxy_address]:[port];
+   export https_proxy=https://[proxy_address]:[port];
    ```
+   Replace the `[proxy_address]:[port]` with your HTTP and HTTPS proxy **address** and **port**.  
    
    For Linux (Ubuntu) users, put this is in `~/.env` (**warning**: this could be wrong as I'm not a Ubuntu user).  
    Now resume your `$gcloud init` step [above](#1-install-gcloud-command-line-tool) and you should be OK. 
    
    
    ### 3. Connect to VM instance via SSH
-   
+Once you get your VM instance running, you can now connect to the instance via SSH tunnel.
 
-## 3. Start IPython Notebook and work in browser
+**1. From GCE dashboard**  
+In GCE dashboard, you can SSH to your running instance by clicking the **SSH** button in the **VM instances** section.
+![web-gce-ssh](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/web-gce-ssh.png)
+   
+Wait for the connection to be established and you can run commands on your VM now in the shell that popped up.
+
+
+**2. From local shell**  
+As long as your VM instance is running, you can connect to it from your local terminal and store your SSH keypairs on your local machine.  
+
+In your terminal:  
+```
+$gcloud compute ssh --zone=[YOUR-ZONE] [USERNAME]@[YOUR-INSTANCE-NAME]
+```
+
+If you don't have SSH keypair for GCE previously, this command prompts you to generate a new SSH keypair (*you can leave                the keygen passphrase empty*), stores them in `~/.ssh` and transfers them to your GCE **Metadata** . Authentication of your later connections will be automatically done by matching the private key stored locally and the public key on Google Cloud. 
+
+>If you have previous knowledge on SSH and prefer not to use `gcloud` tool to handle the connection, check out [this page](https://cloud.google.com/compute/docs/instances/connecting-to-instance) for more details.
+
+## 3. Start IPython Notebook on instance and work in local browser
 
 ## 4. Work with Docker
