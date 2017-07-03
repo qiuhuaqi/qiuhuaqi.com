@@ -39,7 +39,7 @@ Once your instance is ready to go, run your instance by selecting the instance y
 ![out-of-credit-dog](http://cs231n.github.io/assets/sadpuppy_nocredits.png)
 
 ## 2. Connect to VM instance  
-### 1. Install `$gcloud`command line tool  
+### 1. Install `$gcloud` command line tool  
 To connect to your running VM instance on GCE, you can use the `$gcloud` command line in Google Cloud SDK. Download and install the SDK from [here](https://cloud.google.com/sdk/docs) following **step 1 to step 4** on the page.  
    
 Then run the following in your shell:  
