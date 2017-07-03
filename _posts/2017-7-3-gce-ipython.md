@@ -69,11 +69,12 @@ $gcloud init --console-only --skip-diagnostics
    export https_proxy=https://127.0.0.1:1087;
    ```
    
-   For Linux (Ubuntu) users, put this is in `~/.env` (warning: this could be wrong as I'm not a Ubuntu user). 
-   
+   For Linux (Ubuntu) users, put this is in `~/.env` (**warning**: this could be wrong as I'm not a Ubuntu user).  
+   Now resume your `$gcloud init` step [above](#1-install-gcloud-command-line-tool) and you should be OK. 
    
    
    ### 3. Connect to VM instance via SSH
+   
 
 ## 3. Start IPython Notebook and work in browser
 
