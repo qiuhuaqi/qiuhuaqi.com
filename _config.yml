@@ -9,7 +9,9 @@ name: Huaqi Qiu
 description: first personal blog
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
-avatar: HarveyQ.github.io/images/profile_icon.jpg
+# avatar: HarveyQ.github.io/images/profile_icon.jpg
+avatar: https://github.com/HarveyQ/HarveyQ.github.io/blob/master/images/profile_icon.jpg
+
 #
 # Flags below are optional
 #
