@@ -59,7 +59,7 @@ If you are working behind a proxy, you could run into some network-related Error
 Now your SDK is good to go!  
    
 ### 2. Proxy settings  
->Skip this if you are not working behind a proxy.**  
+>Skip this if you are not working behind a proxy.  
    
 If you are working behind a proxy, you need to set your environment variables realted to proxy. Enable HTTP and HTTPS proxy of your proxy tool before continue.  
      
