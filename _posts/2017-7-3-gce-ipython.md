@@ -19,8 +19,7 @@ In addition to the original tutorial, this note adds details on:
 2. [Connect to the VM instance](#2-connect-to-the-vm-instance)  
     1. [Install gcloud command line tool](#1-install-gcloud-command-line-tool)
     2. [Proxy settings](#2-proxy-settings)
-    3. [Initialise gcloud](#3-initialise-gcloud)
-    4. [Connect to instance via SSH](#4-connect-to-instance-via-ssh)
+    3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
 3. [Start IPython Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)
 4. [Work with Docker](#4-work-with-docker)
 
@@ -41,9 +40,40 @@ Once your instance is ready to go, run your instance by selecting the instance y
 
 ## 2. Connect to the VM instance  
    ### 1. Install gcloud command line tool
+   To connect to your running VM instance on GCE, you can use the `$gcloud` command line in Google Cloud SDK. Download and install the SDK from [here](https://cloud.google.com/sdk/docs) following **step 1 to step 4** on the page.  
+   
+   Then run the following in your shell:  
+```
+$gcloud init --console-only --skip-diagnostics
+```
+   
+   The `--console-only` flag stops the shell from opening a browser (this avoids some shell-browser related issues) and the `--skip-diagnostics` flag skips network diagnostics to save some time. This step creates a configuration of gcloud. It requires you to log in your Google account and authorises your local SDK tool to access and operate your GCE. It also needs you to pick compute region and the **cloud project** by selecting the **project ID** (you can find your project ID on your Cloud console dashboard - **project info**). You can view, change or delete your configurations later ([more details](https://cloud.google.com/sdk/docs/managing-configurations)).  
+   
+   If you are working behind a proxy, you could run into some network-related Errors in this step. Check out the [proxy settings](#2-proxy-settings) and try again.  
+   
+>If you do have network problems other than proxy issues, run the following command to run a diagnostic:  
+>```
+>$gcloud info --run-diagnostics
+>```
+   
+   Now your SDK is good to go!  
+   
    ### 2. Proxy settings
-   ### 3. Initialise gcloud
-   ### 4. Connect to instance via SSH
+   >Skip this if you are not working behind a proxy.**  
+   
+   If you are working behind a proxy, you need to set your environment variables realted to proxy. Enable HTTP and HTTPS proxy of your proxy tool before continue.  
+     
+   For Mac OS X, add the following lines in `~/.bash_profile` and `~/.bashrc`:  
+   ```
+   export http_proxy=http://127.0.0.1:1087;
+   export https_proxy=https://127.0.0.1:1087;
+   ```
+   
+   For Linux (Ubuntu) users, put this is in `~/.env` (warning: this could be wrong as I'm not a Ubuntu user). 
+   
+   
+   
+   ### 3. Connect to VM instance via SSH
 
 ## 3. Start IPython Notebook and work in browser
 
