@@ -13,14 +13,14 @@ In addition to the original tutorial, this note adds details on:
 
 
 ## List of content:
-1. [Set up GCE VM instance](1-set-up-gce-vm-instance)
-2. [Connect to the VM instance](2-connect-to-the-vm-instance)  
-    1. [Install gcloud command line tool](1-install-gcloud-command-line-tool)
-    2. [Proxy settings](2-proxy-settings)
-    3. [Initialise gcloud](3-initialise-gcloud)
-    4. [Connect to instance via SSH](4-connect-to-instance-via-ssh)
-3. [Start IPython Notebook and work in browser](3-start-ipython-notebook-and-work-in-browser)
-4. [Work with Docker](4-work-with-docker)
+1. [Set up GCE VM instance](#1-set-up-gce-vm-instance)
+2. [Connect to the VM instance](#2-connect-to-the-vm-instance)  
+    1. [Install gcloud command line tool](#1-install-gcloud-command-line-tool)
+    2. [Proxy settings](#2-proxy-settings)
+    3. [Initialise gcloud](#3-initialise-gcloud)
+    4. [Connect to instance via SSH](#4-connect-to-instance-via-ssh)
+3. [Start IPython Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)
+4. [Work with Docker](#4-work-with-docker)
 
 
 ## 1. Set up GCE VM instance
