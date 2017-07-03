@@ -39,49 +39,50 @@ Once your instance is ready to go, run your instance by selecting the instance y
 ![out-of-credit-dog](http://cs231n.github.io/assets/sadpuppy_nocredits.png)
 
 ## 2. Connect to VM instance  
-   ### 1. Install `$gcloud`command line tool
-   To connect to your running VM instance on GCE, you can use the `$gcloud` command line in Google Cloud SDK. Download and install the SDK from [here](https://cloud.google.com/sdk/docs) following **step 1 to step 4** on the page.  
+### 1. Install `$gcloud`command line tool  
+To connect to your running VM instance on GCE, you can use the `$gcloud` command line in Google Cloud SDK. Download and install the SDK from [here](https://cloud.google.com/sdk/docs) following **step 1 to step 4** on the page.  
    
-   Then run the following in your shell:  
+Then run the following in your shell:  
 ```
 $gcloud init --console-only --skip-diagnostics
 ```
    
-   The `--console-only` flag stops the shell from opening a browser (this avoids some shell-browser related issues) and the `--skip-diagnostics` flag skips network diagnostics to save some time. This step creates a configuration of gcloud. It requires you to log in your Google account and authorises your local SDK tool to access and operate your GCE. It also needs you to pick compute region and the **cloud project** by selecting the **project ID** (you can find your project ID on your Cloud console dashboard - **project info**). You can view, change or delete your configurations later ([more details](https://cloud.google.com/sdk/docs/managing-configurations)).  
+The `--console-only` flag stops the shell from opening a browser (this avoids some shell-browser related issues) and the `--skip-diagnostics` flag skips network diagnostics to save some time. This step creates a configuration of gcloud. It requires you to log in your Google account and authorises your local SDK tool to access and operate your GCE. It also needs you to pick compute region and the **cloud project** by selecting the **project ID** (you can find your project ID on your Cloud console dashboard - **project info**). You can view, change or delete your configurations later ([more details](https://cloud.google.com/sdk/docs/managing-configurations)).  
    
-   If you are working behind a proxy, you could run into some network-related Errors in this step. Check out the [proxy settings](#2-proxy-settings) and try again.  
+If you are working behind a proxy, you could run into some network-related Errors in this step. Check out the [proxy settings](#2-proxy-settings) and try again.  
    
 >If you do have network problems other than proxy issues, run the following command to run a diagnostic:  
 >```
 >$gcloud info --run-diagnostics
 >```
    
-   Now your SDK is good to go!  
+Now your SDK is good to go!  
    
-   ### 2. Proxy settings
-   >Skip this if you are not working behind a proxy.**  
+### 2. Proxy settings  
+>Skip this if you are not working behind a proxy.**  
    
-   If you are working behind a proxy, you need to set your environment variables realted to proxy. Enable HTTP and HTTPS proxy of your proxy tool before continue.  
+If you are working behind a proxy, you need to set your environment variables realted to proxy. Enable HTTP and HTTPS proxy of your proxy tool before continue.  
      
-   For Mac OS X, add the following lines in `~/.bash_profile` and `~/.bashrc`:  
-   ```
-   export http_proxy=http://[proxy_address]:[port];
-   export https_proxy=https://[proxy_address]:[port];
-   ```
-   Replace the `[proxy_address]:[port]` with your HTTP and HTTPS proxy **address** and **port**.  
+For Mac OS X, add the following lines in `~/.bash_profile` and `~/.bashrc`:  
+```
+export http_proxy=http://[proxy_address]:[port];
+export https_proxy=https://[proxy_address]:[port];
+```
+Replace the `[proxy_address]:[port]` with your HTTP and HTTPS proxy **address** and **port**.  
    
-   For Linux (Ubuntu) users, put this is in `~/.env` (**warning**: this could be wrong as I'm not a Ubuntu user).  
-   Now resume your `$gcloud init` step [above](#1-install-gcloud-command-line-tool) and you should be OK. 
+For Linux (Ubuntu) users, put this is in `~/.env` (**warning**: this could be wrong as I'm not a Ubuntu user).  
+
+Now resume your `$gcloud init` step [above](#1-install-gcloud-command-line-tool) and you should be OK.  
    
    
-   ### 3. Connect to VM instance via SSH
-Once you get your VM instance running, you can now connect to the instance via SSH tunnel.
+### 3. Connect to VM instance via SSH  
+Once you get your VM instance running, you can now connect to the instance via SSH tunnel.  
 
 **1. From GCE dashboard**  
 In GCE dashboard, you can SSH to your running instance by clicking the **SSH** button in the **VM instances** section.
-![web-gce-ssh](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/web-gce-ssh.png)
-   
-Wait for the connection to be established and you can run commands on your VM now in the shell that popped up.
+![web-gce-ssh](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/web-gce-ssh.png)  
+
+Wait for the connection to be established and you can run commands on your VM now in the shell that popped up.  
 
 
 **2. From local shell**  
