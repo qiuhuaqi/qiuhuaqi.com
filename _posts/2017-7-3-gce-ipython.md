@@ -17,7 +17,7 @@ In addition to the original tutorial, this note adds details on:
 ## List of content:
 1. [Set up GCE VM instance](#1-set-up-gce-vm-instance)
 2. [Connect to VM instance](#2-connect-to-vm-instance)  
-    1. [Install gcloud command line tool](#1-install-gcloud-command-line-tool)
+    1. [Install gcloud command line tool](#1-install-`$gcloud`-command-line-tool)
     2. [Proxy settings](#2-proxy-settings)
     3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
 3. [Start IPython Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)
