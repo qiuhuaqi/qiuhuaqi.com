@@ -100,14 +100,25 @@ If you don't have SSH keypair for GCE previously, this command prompts you to ge
 ## 3. Start IPython Notebook on instance and work in local browser
 Now we have a running VM instance on GCE. The next thing to do is to write codes and run computations on the VM. Of course, you can use your favoriate Linux based light-weight text editors (vim, nano etc.) to edit code/script and run them by kernel using command line. But, it would be nice if we can have a IDE to do that. IPython notebook is such a great tool that we can use. 
 
-**Step 1: Check Jupyter Notebook and IPython installation**
-Check package list in your working environment or more commonly, virtual environment. If you are planning to use a virtual environment, activate your virtualenv first and check packages `pip list` or `conda list` (if you are using conda to manage your virutalenv as me). Look for `ipython` and `jupyter` related packages. Update the packages by
+**Step 1: Check Jupyter Notebook and IPython installation**  
+Check package list in your working environment or more commonly, virtual environment. If you are planning to use a virtual environment, activate your virtualenv first and then check packages using `pip list` or `conda list` (if you are using conda to manage your virutalenv as me). Look for `ipython` and `jupyter` related packages. Update the packages by
 ```
 pip install [package-name] --update
 ```
 
+**Step 2: set external IP address, expose TCP port, create jupyter configuration**  
+Follow the cs231n [Google Cloud tutorial][cs231n-tutorial] for this part. By doing this, we now assigned a static IP address for our VM instance and allowed TCP traffic on port `[port number]` for that IP. For the web-based Jupyter Notebook, this VM now acts as a server that we can now access using local browser in the next step. 
 
 
-*to try next: find a way to use PyCharm to edit Python (.py) codes on servers like this
+**Step 3: start the notebook and use it**  
+Start the Jupyter Notebook by running the following on GCE VM working directory:
+```
+juypter notebook
+```
+(Here I ignored the `--no-browser` as suggested by cs231n tutorial, since it seem set already in configuration.)  
+
+
+
+*to try next: find a way to use PyCharm to edit Python (.py) codes on servers like this  
 
 ## 4. Work with Docker
