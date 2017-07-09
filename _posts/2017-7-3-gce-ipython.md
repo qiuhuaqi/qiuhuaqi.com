@@ -76,7 +76,7 @@ Now resume your `$gcloud init` step [above](#1-install-gcloud-command-line-tool)
    
    
 ### 3. Connect to VM instance via SSH  
-Once you get your VM instance running, you can now connect to the instance via SSH tunnel.  
+Once you get your VM instance running, you can now connect to the instance via SSH tunnel. You need to **START** your instance before you try to connect. 
 
 **1. From GCE dashboard**  
 In GCE dashboard, you can SSH to your running instance by clicking the **SSH** button in the **VM instances** section.
@@ -98,5 +98,16 @@ If you don't have SSH keypair for GCE previously, this command prompts you to ge
 >If you have previous knowledge on SSH and prefer not to use `gcloud` tool to handle the connection, check out [this page](https://cloud.google.com/compute/docs/instances/connecting-to-instance) for more details.
 
 ## 3. Start IPython Notebook on instance and work in local browser
+Now we have a running VM instance on GCE. The next thing to do is to write codes and run computations on the VM. Of course, you can use your favoriate Linux based light-weight text editors (vim, nano etc.) to edit code/script and run them by kernel using command line. But, it would be nice if we can have a IDE to do that. IPython notebook is such a great tool that we can use. 
+
+**Step 1: Check Jupyter Notebook and IPython installation**
+Check package list in your working environment or more commonly, virtual environment. If you are planning to use a virtual environment, activate your virtualenv first and check packages `pip list` or `conda list` (if you are using conda to manage your virutalenv as me). Look for `ipython` and `jupyter` related packages. Update the packages by
+```
+pip install [package-name] --update
+```
+
+
+
+*to try next: find a way to use PyCharm to edit Python (.py) codes on servers like this
 
 ## 4. Work with Docker
