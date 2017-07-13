@@ -45,9 +45,9 @@ Imagine the Python you just installed is an engine. You can use an engine to bui
 IDE stands for **Integrated Development Environment**. This is where you can write and run your Python code.  
 [More about IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
-- Do I have to use IDE?
-NO. Although coding with an IDE makes your life much easier, you do not have to.  
-Technically, you can create and edit a Python script file (.py file) with a text editor that you like. You can use Atom, Vim or Nano if you are on Linux or macOS platform. If you are on Windows, you can use Notepad++. Once you are done coding, you can run the code script in a Python kernel that you can start in a shell. I do not recommend this for beginners. But it's a good thing to know about.  
+- Do I have to use IDE? 
+NO. Although coding with an IDE makes your life much easier, you do not have to.   
+Technically, you can create and edit a Python script file (.py file) with a text editor that you like. You can use Atom, Vim or Nano if you are on Linux or macOS platform. If you are on Windows, you can use Notepad++. Once you are done coding, you can run the code script in a Python kernel that you can start in a shell. I do not recommend this for beginners. But it's a good thing to know about.  
 (*Notice: please don't use Microsoft Word for Python coding, nor for coding in any programming language*).  
 
 - Which IDE to use?  
