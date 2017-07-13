@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Install Python and start programming for beginners
+date: 2017-07-13
 ---
 
 ### A simple tutorial: install and get started with Python programming for beginners
