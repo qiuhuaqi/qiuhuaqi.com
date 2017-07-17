@@ -62,6 +62,6 @@ You can create and edit a Python script file (.py file) with your choice of text
 
 *Once you are more comfortable with coding in Python and environment configurations, check out the amazing IDE - [Pycharm](https://www.jetbrains.com/pycharm) powered by Google-favored company JetBrains (the CE - community edition is free and adequate for learning purposes).*
 
-I believe now you have all you need to start on Python. Remember this article is a quick passage to kick-start coding in Python and is by no means the exclusive way. I hope you can later figure out what role each step plays in the process of coding-running of Python. Also, I encourage you to create your own developing configuration workflow and share it with others!  
+I believe now you have all you need to start on Python. Remember this article is a quick passage to kick-start coding in Python which is by no means the exclusive way. I hope you can later figure out what role each step plays in the process of coding-running of Python. Also, I encourage you to create your own developing configuration workflow and share it with others!  
 
 For now, have fun coding!
