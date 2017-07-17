@@ -33,7 +33,7 @@ Imagine the Python you just installed is an engine. You can use an engine to bui
 Download Anaconda from [here](https://www.continuum.io/downloads).
 Choose the correct platform that you are on (Windows/macOS/Linux). Don't worry about the Python version. Anaconda works with both versions. Once you are done, open Anaconda-Navigator (the Anaconda [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)) to have a look.  
 
-Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools. For example, I'm currently using the light-weight `virutalenv` instead of mini-conda on my sotrage-limited Raspberry Pi.  
+Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools. For example, I'm currently using the light-weight `virtualenv` instead of mini-conda on my sotrage-limited Raspberry Pi.  
 
 [virtual-env]:https://realpython.com/blog/python/python-virtual-environments-a-primer/
 
