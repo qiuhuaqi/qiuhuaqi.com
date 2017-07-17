@@ -41,7 +41,7 @@ Note: Anaconda is **not** really a light-weight solution to package management. 
 - How to manage environments?  
 You don't need to worry about environments for most of introductory Python courses. The default 'root' environment should work well. You can see what's included in this enviornment in the Environment tab of Anaconda-Navigator (GUI). If you want, you can create a new environment by clicking the **Create** button on the left-bottom corner and specify the name and Python version of your environment. Activate your environment by clicking the play button (shaped button) on your environment tab before running your Python program.
 
-![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/spyder.png)
+![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/root-env.png)
 
 More on how to use Anaconda to manage environments [here](https://conda.io/docs/using/envs.html).  
 
