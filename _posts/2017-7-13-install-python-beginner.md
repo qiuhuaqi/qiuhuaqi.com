@@ -26,17 +26,24 @@ Once you mastered one version, using the other version isn't much of a big chall
 
 ### 2. Install Anaconda
 - Why Anaconda?  
-Imagine the Python you just installed is an engine. You can use an engine to build a motorcycle, a boat or a car. To do thatm you need to combine the engine with all the other parts. In Python world, these parts are the **packages**. Collections of these packages are sometimes referred to as **libraries**. You might want to use different combinations of packages/libraries for different projects. So you can put together an **environment** of packages/libraries (e.g. [virtual environment][virtual-env]) for each of your project. Managing these environments manually is possible but rather time-consuming and troublesome. So for now, let's keep it simple and let the professionals do that for us.  
+Imagine the Python you just installed is an engine. You can use an engine to build a motorcycle, a boat or a car. To do that, you need to combine the engine with all the other parts. In programming world, these parts are called **packages**. Collections of these packages are sometimes referred to as **libraries**. You might want to use different combinations of packages/libraries for different projects. So you can put together an **environment** of packages/libraries (e.g. [virtual environment][virtual-env]) for each of your project. Managing these environments manually is possible but rather time-consuming and troublesome. So for now, let's keep it simple and let the professionals do that for us.  
 **Anaconda** is a package & environment management tool that does just that.  
 
 - How to install?  
 Download Anaconda from [here](https://www.continuum.io/downloads).
 Choose the correct platform that you are on (Windows/macOS/Linux). Don't worry about the Python version. Anaconda works with both versions. Once you are done, open Anaconda-Navigator (the Anaconda [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)) to have a look.  
 
-Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools, among which many of them can create virtual environments. For example, I'm currently using the light-weight `virutalenv` instead of mini-conda for package and virtual environment management on my sotrage-limited Raspberry Pi.  
+Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools. For example, I'm currently using the light-weight `virutalenv` instead of mini-conda on my sotrage-limited Raspberry Pi.  
 
 [virtual-env]:https://realpython.com/blog/python/python-virtual-environments-a-primer/
 
+
+- How to manage environments?  
+You don't need to worry about environments for most of introductory Python courses. The default 'root' environment should work well. You can see what's included in this enviornment in the Environment tab of Anaconda-Navigator (GUI). If you want, you can create a new environment by clicking the **Create** button on the left-bottom corner and specify the name and Python version of your environment. Activate your environment by clicking the play button (shaped button) on your environment tab before running your Python program.
+
+![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/spyder.png)
+
+More on how to use Anaconda to manage environments [here](https://conda.io/docs/using/envs.html).  
 
 ### 3. Start coding with IDE
 
@@ -46,6 +53,8 @@ IDE stands for **Integrated Development Environment**. This is where you can wri
 
 - Which IDE to use?  
 The Python you installed in [Step 1](#1-install-python) comes with a default IDE called **IDEL**. Anaconda offers more powerful IDEs for us such as Jupyter Notebook and Spyder. I recommend **Spyder** for beginners. You can simply launch it in the Anaconda-Navigator Home page. Spyder comes with an interactive kernel for simple testing runs of your code and an editor for writing Python scripts. Don't worry, you should learn about these concepts from your Python learning material.  
+
+![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/spyder.png)
 
 - Do I have to use IDE?  
 **NO.** Although coding with an IDE makes your life much easier, you do not have to use it.   
