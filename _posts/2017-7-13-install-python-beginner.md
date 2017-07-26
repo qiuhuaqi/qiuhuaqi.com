@@ -33,7 +33,7 @@ Imagine the Python you just installed is an engine. You can use an engine to bui
 Download Anaconda from [here](https://www.continuum.io/downloads).
 Choose the correct platform that you are on (Windows/macOS/Linux). Don't worry about the Python version. Anaconda works with both versions. Once you are done, open Anaconda-Navigator (the Anaconda [GUI](https://en.wikipedia.org/wiki/Graphical_user_interface)) to have a look.  
 
-Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools. For example, I'm currently using the light-weight `virutalenv` instead of mini-conda on my sotrage-limited Raspberry Pi.  
+Note: Anaconda is **not** really a light-weight solution to package management. There are loads of other management tools. For example, I'm currently using the light-weight `virtualenv` instead of mini-conda on my sotrage-limited Raspberry Pi.  
 
 [virtual-env]:https://realpython.com/blog/python/python-virtual-environments-a-primer/
 
@@ -62,6 +62,6 @@ You can create and edit a Python script file (.py file) with your choice of text
 
 *Once you are more comfortable with coding in Python and environment configurations, check out the amazing IDE - [Pycharm](https://www.jetbrains.com/pycharm) powered by Google-favored company JetBrains (the CE - community edition is free and adequate for learning purposes).*
 
-I believe now you have all you need to start on Python. Remember this article is a quick passage to kick-start coding in Python and is by no means the exclusive way. I hope you can later figure out what role each step plays in the process of coding-running of Python. Also, I encourage you to create your own developing configuration workflow and share it with others!  
+I believe now you have all you need to start on Python. Remember this article is a quick passage to kick-start coding in Python which is by no means the exclusive way. I hope you can later figure out what role each step plays in the process of coding-running of Python. Also, I encourage you to create your own developing configuration workflow and share it with others!  
 
 For now, have fun coding!
