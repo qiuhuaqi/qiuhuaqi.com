@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Setup Google Cloud Compute instance + iPython notebook
+title: Setup Google Cloud Compute instance + Jupyter Notebook
 ---
 
-This note walks through the cs231n [Goolge Cloud tutorial][cs231n-tutorial] and sets up a Google Cloud Engine (GCE) Virtual Machine instance with iPython notebook (IDE). 
+This note walks through the cs231n [Goolge Cloud tutorial][cs231n-tutorial], sets up a Google Cloud Engine (GCE) Virtual Machine instance and sets up Jupyter Notebook for devloping.  
 
 [cs231n-tutorial]:http://cs231n.github.io/gce-tutorial
 
@@ -11,7 +11,6 @@ In addition to the original tutorial, this note adds details on:
 
 - issues with working behind proxy
 - SSH connection with with $gcloud commmand line tool
-- using Docker on GCE VM
 
 
 ## List of content:
@@ -97,7 +96,7 @@ If you don't have SSH keypair for GCE previously, this command prompts you to ge
 
 >If you have previous knowledge on SSH and prefer not to use `gcloud` tool to handle the connection, check out [this page](https://cloud.google.com/compute/docs/instances/connecting-to-instance) for more details.
 
-## 3. Start IPython Notebook on instance and work in local browser
+## 3. Start Jupyter Notebook on instance and work in local browser
 Now we have a running VM instance on GCE. The next thing to do is to write codes and run computations on the VM. Of course, you can use your favoriate Linux based light-weight text editors (vim, nano etc.) to edit code/script and run them by kernel using command line. But, it would be nice if we can have a IDE to do that. IPython notebook is such a great tool that we can use. 
 
 **Step 1: Check Jupyter Notebook and IPython installation**  
@@ -106,19 +105,35 @@ Check package list in your working environment or more commonly, virtual environ
 pip install [package-name] --update
 ```
 
-**Step 2: set external IP address, expose TCP port, create jupyter configuration**  
-Follow the cs231n [Google Cloud tutorial][cs231n-tutorial] for this part. By doing this, we now assigned a static IP address for our VM instance and allowed TCP traffic on port `[port number]` for that IP. For the web-based Jupyter Notebook, this VM now acts as a server that we can now access using local browser in the next step. 
+**Step 2: Set external IP address, expose TCP port**  
+In order to access Jupyter Notebook run on the Cloud VM from a local browser, we need to assign an external IP address for the VM. Google allows us to attach one static IP address to our VM instances ***free of charge***. We also need to add a firewall rule to expose a TCP port to which we will direct our connection from the browser. Detailed instructions can be found in the cs231n [Google Cloud tutorial][cs231n-tutorial]. 
+
+**Step 3: Create jupyter configuration**  
+We now need to do a bit configurations for the notebook. On your running VM instance, find the Jupyter Notebook configuration file (this file is typically under the directory: /home/your_user_name/.jupyter)
+```ls ~/.jupyter/jupyter_notebook_config.py```  
+
+If the config file doesn't exit, create one by:  
+```jupyter notebook --generate-config```
+(you need to activate your virtual environment to use `jupyter notebook`)
+
+Add the following configurations to the config file:
+```
+c = get_config()
+
+c.NotebookApp.ip = '*'
+
+c.NotebookApp.open_browser = False
+
+c.NotebookApp.port = <PORT-NUMBER>
+```
+The \<PORT-NUMBER\> should match the one you set in the VM firewall rule. 
 
 
-**Step 3: start the notebook and use it**  
-Start the Jupyter Notebook by running the following on GCE VM working directory:
+**Step 4: Launching the notebook and connecting to it**
+Start the Jupyter Notebook by running the following in the VM:
 ```
 juypter notebook
 ```
-(Here I ignored the `--no-browser` as suggested by cs231n tutorial, since it seem set already in configuration.)  
+(you can ignored the `--no-browser` flag that is suggested by cs231n tutorial. It's already set in the configuration)  
 
 
-
-*to try next: find a way to use PyCharm to edit Python (.py) codes on servers like this  
-
-## 4. Work with Docker
