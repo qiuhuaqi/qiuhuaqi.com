@@ -20,6 +20,7 @@ In addition to the original tutorial, this note adds details on:
     2. [Proxy settings](#2-proxy-settings)
     3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
 3. [Start IPython Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)  
+
 [Summary](#summary)
 
 
@@ -150,6 +151,7 @@ In summary, the topics that we covered in this blog are:
 - setting up a Google Cloud Compute VM and running VM instances
 - connecting to the running VM instance via SSH
 - setting up Jupyter Notebook for developing and accessing the notebook server from a local browser  
+
 Now you can work on your code on your cloud VM using Jupyter Notebook and run them with your computing resource on GCE.  
 
 And of course, don't forget to ***STOP YOUR INSTANCE***.  
