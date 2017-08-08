@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Setup Google Cloud Compute instance + Jupyter Notebook
+date: 2017-08-07
 ---
 
 This note walks through the cs231n [Goolge Cloud tutorial][cs231n-tutorial], sets up a Google Cloud Engine (GCE) Virtual Machine instance and sets up Jupyter Notebook for developing.  
