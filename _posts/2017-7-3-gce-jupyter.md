@@ -152,6 +152,6 @@ In summary, the topics that we covered in this blog are:
 - connecting to the running VM instance via SSH
 - setting up Jupyter Notebook for developing and accessing the notebook server from a local browser  
 
-Now you can work on your code on your cloud VM using Jupyter Notebook and run them with your computing resource on GCE.  
+I hope this helps.  
 
 And of course, don't forget to ***STOP YOUR INSTANCE***.  
