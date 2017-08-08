@@ -20,7 +20,7 @@ In addition to the original tutorial, this note adds details on:
     2. [Proxy settings](#2-proxy-settings)
     3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
 3. [Start IPython Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)
-4. [Work with Docker](#4-work-with-docker)
+[Summary](#summary)
 
 
 ## 1. Set up GCE VM instance  
@@ -104,9 +104,10 @@ Check package list in your working environment or more commonly, virtual environ
 ```
 pip install [package-name] --update
 ```
+In my case, I found some very useful features (e.g. the Markdown and some key mappings) were not included in my initial `apt-get` installation of Jupyter Notebook. So I updated to the newer version in `pip`.
 
 **Step 2: Set external IP address, expose TCP port**  
-In order to access Jupyter Notebook run on the Cloud VM from a local browser, we need to assign an external IP address for the VM. Google allows us to attach one static IP address to our VM instances ***free of charge***. We also need to add a firewall rule to expose a TCP port to which we will direct our connection from the browser. Detailed instructions can be found in the cs231n [Google Cloud tutorial][cs231n-tutorial]. 
+In order to access Jupyter Notebook run on the Cloud VM from a local browser, we need to assign an external IP address for the VM. Google allows us to attach one static IP address to our VM instances ***free of charge***. We also need to add a firewall rule to expose a TCP port to which we will direct our connection from the browser. Detailed instructions can be found in the cs231n [Google Cloud tutorial][cs231n-tutorial]. Once you are done, take not of your VM's external IP address. 
 
 **Step 3: Create jupyter configuration**  
 We now need to do a bit configurations for the notebook. On your running VM instance, find the Jupyter Notebook configuration file (this file is typically under the directory: /home/your_user_name/.jupyter)
@@ -117,23 +118,38 @@ If the config file doesn't exit, create one by:
 (you need to activate your virtual environment to use `jupyter notebook`)
 
 Add the following configurations to the config file:
+
 ```
 c = get_config()
 
 c.NotebookApp.ip = '*'
 
-c.NotebookApp.open_browser = False
-
 c.NotebookApp.port = <PORT-NUMBER>
-```
-The \<PORT-NUMBER\> should match the one you set in the VM firewall rule. 
 
+c.NotebookApp.open_browser = False
+```
+
+The \<PORT-NUMBER\> should match the one you set in the VM firewall rule. I assigned port 7000 for my notebook. The configurations we added mean that the notebook will be listening to all IP addresses on port \<PORT-NUMBER\> and will not open a browser upon starting up.  
 
 **Step 4: Launching the notebook and connecting to it**
-Start the Jupyter Notebook by running the following in the VM:
+Start the Jupyter Notebook by running the following in the VM under your desired working directory:
 ```
 juypter notebook
 ```
 (you can ignored the `--no-browser` flag that is suggested by cs231n tutorial. It's already set in the configuration)  
 
+You should see a few messages from NotebookApp telling you that your notebook server is now up and running. In particular, you should look for the line that gives you the URL for accessing the notebook. Mine looks like:
+```
+[I 03:46:12.932 NotebookApp] The IPython Notebook is running at: http://[all ip addresses on your system]:7000/
+```
 
+Next, open up your favorite browser and access the URL with the \[all ip addresses on your system\] part replaced by the static external IP address that you set earlier. If it all goes well, you should then see the Jupyter Notebook interface. We're all set!
+
+### Summary  
+In summary, the topics that we covered in this blog are:
+- setting up a Google Cloud Compute VM and running VM instances
+- connecting to the running VM instance via SSH
+- setting up Jupyter Notebook for developing and accessing the notebook server from a local browser
+Now you can work on your code on your cloud VM using Jupyter Notebook and run them with your computing resource on GCE.  
+
+And of course, don't forget to ***STOP YOUR INSTANCE***.  
