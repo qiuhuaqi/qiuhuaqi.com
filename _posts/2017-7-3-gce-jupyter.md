@@ -148,7 +148,7 @@ You should see a few messages from NotebookApp telling you that your notebook se
 Next, open up your favorite browser and access the URL with the \[all ip addresses on your system\] part replaced by the static external IP address that you set earlier. If it all goes well, you should then see the Jupyter Notebook interface. We're all set!
 
 ### Summary  
-In summary, we walked through the following topics in the setting up in the original tutorial with added details: 
+In summary, we walked through the following topics of the setting up in the original tutorial with added details: 
 - setting up a Google Cloud Compute VM and running VM instances
 - connecting to the running VM instance via SSH (with proxy settings)
 - setting up Jupyter Notebook for developing and accessing the notebook server from a local browser  
