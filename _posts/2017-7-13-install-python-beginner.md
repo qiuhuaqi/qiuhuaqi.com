@@ -48,17 +48,20 @@ More on how to use Anaconda to manage environments [here](https://conda.io/docs/
 ### 3. Start coding with IDE
 
 - What's IDE?  
-IDE stands for **Integrated Development Environment**. This is where you can write and run your Python code.  
+IDE stands for **Integrated Development Environment**. This is where you can write and run your Python code. A Python IDE typically contains a code editor, project code/file management system, interpreter configurations and of course, a fancy color scheme. Most IDEs come with auto-completion, interactive kernel and debugger which can be very useful for coding. Don't worry if some of the terms sound alien. You should easily learn about these concepts from your Python learning material.  
 [More about IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
 - Which IDE to use?  
-The Python you installed in [Step 1](#1-install-python) comes with a default IDE called **IDEL**. Anaconda offers more powerful IDEs for us such as Jupyter Notebook and Spyder. I recommend **Spyder** for beginners. You can simply launch it in the Anaconda-Navigator Home page. Spyder comes with an interactive kernel for simple testing runs of your code and an editor for writing Python scripts. Don't worry, you should learn about these concepts from your Python learning material.  
+The Python you installed in [Step 1](#1-install-python) comes with a default IDE called **IDEL**. Anaconda offers more powerful IDEs for us such as Jupyter Notebook and Spyder. I recommend **Spyder** for beginners. You can simply launch it in the Anaconda-Navigator Home page. Spyder comes with an interactive kernel for simple testing runs of your code and an editor for writing Python scripts. 
 
 ![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/spyder.png)
 
 - Do I have to use IDE?  
-**NO.** Although coding with an IDE makes your life much easier, you do not have to use it.   
-You can create and edit a Python script file (.py file) with your choice of text editor and run your script with a Python kernel. You can use Sublime Text, Atom, Vim or Nano if you are on Linux or macOS platform. You can even add plug-in(s) on some of these text editors so you can have cool color-scheme, split-window, pep8 style-checking, interactive kernel and auto-complete. If you are on Windows, you can use Notepad++. I do not recommend this for Python beginners unless you have good experience in system configuration.
+**NO.**  
+Although coding with an IDE makes your life much easier, you do not have to use it. You can create and edit a Python script file (.py file) with your choice of text editor and run your script with a Python kernel. You can use Sublime Text, Atom, Vim or Nano if you are on Linux or macOS platform. If you are on Windows, you can use Notepad++.   
+
+28 July update:
+You can make a mini-IDE by adding plug-in(s) on some of these text editors so you can have cool color scheme, split-window, pep8 style-checking and auto-completion. I do not recommend this for Python beginners unless you have good experience in system configuration. However, this set-up do benefit from it being light-weighted, especially for remote deployment.  
 
 *Once you are more comfortable with coding in Python and environment configurations, check out the amazing IDE - [Pycharm](https://www.jetbrains.com/pycharm) powered by Google-favored company JetBrains (the CE - community edition is free and adequate for learning purposes).*
 
