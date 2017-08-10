@@ -20,7 +20,7 @@ In addition to the original tutorial, this note adds details on:
     1. [Install gcloud command line tool](#1-install-`$gcloud`-command-line-tool)
     2. [Proxy settings](#2-proxy-settings)
     3. [Connect to VM instance via SSH](#3-connect-to-vm-instance-via-ssh)
-3. [Start Jupyter Notebook and work in browser](#3-start-ipython-notebook-and-work-in-browser)  
+3. [Start Jupyter Notebook on VM and work in local browser](#3-start-jupyter-notebook-on-vm-and-work-in-local-browser)  
 
 [Summary](#summary)
 
@@ -98,7 +98,7 @@ If you don't have SSH keypair for GCE previously, this command prompts you to ge
 
 >If you have previous knowledge on SSH and prefer not to use `gcloud` tool to handle the connection, check out [this page](https://cloud.google.com/compute/docs/instances/connecting-to-instance) for more details.
 
-## 3. Start Jupyter Notebook on instance and work in local browser
+## 3. Start Jupyter Notebook on VM and work in local browser
 Now we have a running VM instance on GCE. The next thing to do is to write codes and run computations on the VM. Of course, you can use your favoriate Linux based light-weight text editors (vim, nano etc.) to edit code/script and run them by kernel using command line. But, it would be nice if we can have a IDE to do that. IPython notebook is such a great tool that we can use. 
 
 **Step 1: Check Jupyter Notebook and IPython installation**  
@@ -153,7 +153,7 @@ In summary, we walked through the following topics in the setting up in the orig
 - connecting to the running VM instance via SSH (with proxy settings)
 - setting up Jupyter Notebook for developing and accessing the notebook server from a local browser  
 
-And of course, don't forget to ***STOP YOUR INSTANCE***. 
+And of course, don't forget to ***STOP YOUR INSTANCE***.  
 
 I hope this helps.  
 
