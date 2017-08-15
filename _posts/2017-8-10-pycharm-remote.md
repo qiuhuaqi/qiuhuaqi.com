@@ -39,16 +39,18 @@ Now, let's deploy SSH keypair so we don't have to authenticate by typing in pass
 ssh-keygen -t rsa
 ```
 
-Follow the instructions (you can leave the phraseword empty) and you should have a `id_rsa` (private key) and `id_rsa.pub` file in your `.ssh` folder. You can display and copy the key in your terminal by:
+Follow the instructions (you can leave the passphrase empty) and you should have a `id_rsa` (private key) and `id_rsa.pub` (public key) file in your `.ssh` folder. You can display and copy the key in your terminal by:
 ```
 cat id_rsa
 cat id_rsa.pub
 ```
-Keep your private key by yourself, and copy the public key to your remote server:
+Keep your private key to yourself, and copy the public key to your remote server:
 ```
 ssh-key-copy [remote username]@[remote IP]
 ```
-You will most likely required to login using password for this connection. Now you are "SSH ready".
+You will most likely required to login using password for your first connection. If your server rejects your `ssh-key-copy`, you can always mannualy create a authrosied key file in the `.ssh` directory of your remote server and copy-paste your local public key to it.  
+  
+Now you are "SSH ready".
 
 
 **2. PyCharm remote deployment**  
