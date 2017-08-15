@@ -3,3 +3,6 @@ layout: post
 title: PyCharm remote interpreter and deployment
 date: 2017-07-13
 ---
+
+Now let's get productive!
+
