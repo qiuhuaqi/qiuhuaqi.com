@@ -3,7 +3,7 @@ layout: post
 title: Setup Google Cloud Compute instance + Jupyter Notebook
 date: 2017-08-07
 ---
-
+## Intro
 This note walks through the cs231n [Goolge Cloud tutorial][cs231n-tutorial], sets up a Google Cloud Engine (GCE) Virtual Machine instance and sets up Jupyter Notebook for developing.  
 
 [cs231n-tutorial]:http://cs231n.github.io/gce-tutorial
@@ -13,8 +13,10 @@ In addition to the original tutorial, this note adds details on:
 - issues with working behind proxy
 - SSH connection with with $gcloud commmand line tool
 
+---
 
 ## List of content:
+[Intro](#intro)
 1. [Set up GCE VM instance](#1-set-up-gce-vm-instance)
 2. [Connect to VM instance](#2-connect-to-vm-instance)  
     1. [Install gcloud command line tool](#1-install-`$gcloud`-command-line-tool)
@@ -24,6 +26,7 @@ In addition to the original tutorial, this note adds details on:
 
 [Summary](#summary)
 
+---
 
 ## 1. Set up GCE VM instance  
 GCE are part of the Google Cloud Platform (GCP). It provides Cloud computing power using Google's cloud servers for users at a fair price. It's a great choice for individual developers who have limited local computing resources. Google provides $300 of credit to new users of GCP, which is a great gesture.
@@ -38,6 +41,7 @@ Once your instance is ready to go, run your instance by selecting the instance y
 
 **Remember to stop your VM instance when you are done! Running instances cost credits or dollar bills!**
 ![out-of-credit-dog](http://cs231n.github.io/assets/sadpuppy_nocredits.png)
+(*it's the same image, I know. But it's cute.*)
 
 ## 2. Connect to VM instance  
 ### 1. Install `$gcloud` command line tool  
