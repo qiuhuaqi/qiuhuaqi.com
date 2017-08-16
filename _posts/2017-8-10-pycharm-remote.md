@@ -71,7 +71,7 @@ Now we are "SSH ready".
 ### Instructions
 We start with a new empty PyCharm project so we don't mess up an existing project. Fire up the PyCharm Pro and create a new testing project. Head to PyCharm configurations at: **PyCharm > Preferences** (File > Settings for Linux & Windows). Then go to **Build, Execution, Deployment > Deployment**. Click on the `+` to create a new deployment setting. 
 
-![add server](http://cs231n.github.io/assets/pycharm-remote/start-deploy.png)
+![add server](http://cs231n.github.io/assets/images/pycharm-remote/start-deploy.png)
 
 Name your remote server and choose **SFTP** for **Type**, as shown in the snapshot. This means we will be using the SFTP protocol for file transfer. Do make sure your server supports this protocol. Click `OK`. Next, we need to configure the connection to the server.   
 
@@ -85,19 +85,19 @@ In the **Connection** tab:
 - \[Auth type\]: Key pair (OpenSSH or PuTTY)
 - \[Private key file\]: path to your **private** key
 
-![connection setting](http://cs231n.github.io/assets/pycharm-remote/connect-settings.png)
+![connection setting](http://cs231n.github.io/assets/images/pycharm-remote/connect-settings.png)
 
 Click `Test SFTP connection` to make sure your connection is successful. If so, go to **Mappings** tab. 
 - \[Local Path\]: path of your local project
 - \[Deployment path on server\]: path to which you deploy your project. Your local project will be uploading file to this path on the server and downloading files from this path to your local path.  
 
-![mappings setting](http://cs231n.github.io/assets/pycharm-remote/mappings.png)
+![mappings setting](http://cs231n.github.io/assets/images/pycharm-remote/mappings.png)
 
 We are all done here. Click `OK`.  
 
 You can check files on your remote host(server). Go to the menu bar **Tool > Deployment > Browse Remote Host** to open the remote host file window. You should have something looking like the snapshot below:  
 
-![remote host](http://cs231n.github.io/assets/pycharm-remote/deployed.png)
+![remote host](http://cs231n.github.io/assets/images/pycharm-remote/deployed.png)
 
 
 ### Some explainations
