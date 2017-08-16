@@ -1,7 +1,7 @@
 ---
 layout: post
 title: PyCharm remote interpreter and deployment
-date: 2017-07-13
+date: 2017-08-10
 ---
 
 ### List of contents:  
