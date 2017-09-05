@@ -63,15 +63,15 @@ Keep your private key to yourself, and copy the public key to your remote server
 ssh-key-copy [remote username]@[remote IP]
 ```
 `[remote IP]` is the IP address of your  You will most likely required to login using password for your first connection. If your server rejects your `ssh-key-copy`, you can always mannualy create a authrosied key file in the `.ssh` directory of your remote server and copy-paste your local public key to it.
-  
+
 Now we are "SSH ready".
 
 
 ## 2. Remote deployment
 ### Instructions
-We start with a new empty PyCharm project so we don't mess up an existing project. Fire up the PyCharm Pro and create a new testing project. Head to PyCharm configurations at: **PyCharm > Preferences** (File > Settings for Linux & Windows). Then go to **Build, Execution, Deployment > Deployment**. Click on the `+` to create a new deployment setting. 
+We start with a new empty PyCharm project so we don't mess up an existing project. Fire up the PyCharm Pro and create a new testing project. Head to PyCharm configurations at: **PyCharm > Preferences** (File > Settings for Linux & Windows). Then go to **Build, Execution, Deployment > Deployment**. Click on the `+` to create a new deployment setting.
 
-![add server](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/pycharm-remote/start-deploy.png)
+![add server](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/pycharm-remote/start-deploy.png)
 
 Name your remote server and choose **SFTP** for **Type**, as shown in the snapshot. This means we will be using the SFTP protocol for file transfer. Do make sure your server supports this protocol. Click `OK`. Next, we need to configure the connection to the server.   
 
@@ -85,19 +85,19 @@ In the **Connection** tab:
 - \[Auth type\]: Key pair (OpenSSH or PuTTY)
 - \[Private key file\]: path to your **private** key
 
-![connection setting](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/pycharm-remote/connect-settings.png)
+![connection setting](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/pycharm-remote/connect-settings.png)
 
-Click `Test SFTP connection` to make sure your connection is successful. If so, go to **Mappings** tab. 
+Click `Test SFTP connection` to make sure your connection is successful. If so, go to **Mappings** tab.
 - \[Local Path\]: path of your local project
 - \[Deployment path on server\]: path to which you deploy your project. Your local project will be uploading file to this path on the server and downloading files from this path to your local path.  
 
-![mappings setting](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/pycharm-remote/mappings.png)
+![mappings setting](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/pycharm-remote/mappings.png)
 
 We are all done here. Click `OK`.  
 
 You can check files on your remote host(server). Go to the menu bar **Tool > Deployment > Browse Remote Host** to open the remote host file window. You should have something looking like the snapshot below:  
 
-![remote host](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/pycharm-remote/deployed.png)
+![remote host](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/pycharm-remote/deployed.png)
 
 
 ### Some explainations
@@ -118,7 +118,7 @@ In a word, the PyCharm "charm" requires working on local Python code. Direct cod
 
 
 ## Summary
-In summary, we 
+In summary, we
 
 ## Future thoughts: Docker
 Virtual Machines still rely partially on OS level. You and I both know that messing with OS configurations is not fun. Solution: **Docker**. Docker daemon takes care of the talking to OS part, leaving us comfortablely messing with the **Containers**. It is possible to run interpreters in Docker containers and more excitingly, connect it to PyCharm. Next time on developing environment topic, I want to figure out the connection to Docker and take this to the next level.

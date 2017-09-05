@@ -15,11 +15,11 @@ The three steps to start coding in Python:
 3. [Start coding with IDE](#3-start-coding-with-ide)
 
 ### 1. Install Python
-- Download Python from [here](https://www.python.org/downloads/). 
+- Download Python from [here](https://www.python.org/downloads/).
 
 - Versions?  
 Python currently supports two versions: Python 2 and Python 3. Unfortunately, Python 3 does not support some [syntax](https://en.wikipedia.org/wiki/Syntax_(programming_languages)) and the mechanism used in Python 2. So you do have to choose.  
- 
+
 - Which version to use?  
 Your decision should be based on **your learning material**. Find out which version that your material is using and download that one.  
 Once you mastered one version, using the other version isn't much of a big challenge.
@@ -41,7 +41,7 @@ Note: Anaconda is **not** really a light-weight solution to package management. 
 - How to manage environments?  
 You don't need to worry about environments for most of introductory Python courses. The default 'root' environment should work well. You can see what's included in this enviornment in the Environment tab of Anaconda-Navigator (GUI). If you want, you can create a new environment by clicking the **Create** button on the left-bottom corner and specify the name and Python version of your environment. Activate your environment by clicking the play button (shaped button) on your environment tab before running your Python program.
 
-![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/root-env.png)
+![anaconda-spyder](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/install-python/root-env.png)
 
 More on how to use Anaconda to manage environments [here](https://conda.io/docs/using/envs.html).  
 
@@ -52,9 +52,9 @@ IDE stands for **Integrated Development Environment**. This is where you can wri
 [More about IDE](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
 - Which IDE to use?  
-The Python you installed in [Step 1](#1-install-python) comes with a default IDE called **IDEL**. Anaconda offers more powerful IDEs for us such as Jupyter Notebook and Spyder. I recommend **Spyder** for beginners. You can simply launch it in the Anaconda-Navigator Home page. Spyder comes with an interactive kernel for simple testing runs of your code and an editor for writing Python scripts. 
+The Python you installed in [Step 1](#1-install-python) comes with a default IDE called **IDEL**. Anaconda offers more powerful IDEs for us such as Jupyter Notebook and Spyder. I recommend **Spyder** for beginners. You can simply launch it in the Anaconda-Navigator Home page. Spyder comes with an interactive kernel for simple testing runs of your code and an editor for writing Python scripts.
 
-![anaconda-spyder](https://raw.githubusercontent.com/HarveyQ/HarveyQ.github.io/master/images/install-python/spyder.png)
+![anaconda-spyder](https://raw.githubusercontent.com/qiuhuaqi/qiuhuaqi.github.io/master/images/install-python/spyder.png)
 
 - Do I have to use IDE?  
 **NO.**  
